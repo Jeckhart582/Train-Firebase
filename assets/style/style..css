@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    font-weight: 5px;
+    padding: 5px;
+}
+
+.jumbotron {
+    border-style: solid;
+}
+
+h3 {
+    text-align: center;
+}

@@ -11,6 +11,10 @@
 
   var database = firebase.database();
 
+  $("#userClear").on("click", function () {
+    $("#tableBody").empty();
+  })
+
   $("#userConfirm").on("click", function (){
 
     var userTrainName = $("#userTrainName").val().trim();
@@ -60,7 +64,7 @@
       var nextTrain = moment().add(nextTrainTime, "minutes").format("HH:mm");
       console.log(nextTrain)
 
-      $("#trainTable>tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextTrain+ "</td><td>" + nextTrainTime + "</td></tr>");
+      $("#tableBody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextTrain+ "</td><td>" + nextTrainTime + "</td></tr>");
 
       
   })
